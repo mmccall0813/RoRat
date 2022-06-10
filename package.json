@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "express": "^4.18.1",
+    "snekfetch": "^4.0.4",
+    "socket.io": "^4.5.1",
+    "ws": "^8.7.0"
+  }
+}

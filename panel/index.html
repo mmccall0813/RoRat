@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RoRat Beta</title>
+    </head>
+    <body>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="io.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <!-- ace editor import -->
+    <script src="/ace-builds/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/ace-builds/src-min-noconflict/ext-language_tools.js"></script>
+    </body>
+    <div id="users">
+        <button id="refreshUsers" onclick="refresh()">Refresh Users</button>
+    </div>
+    <div id="welcomeWindow">
+        <h1>Welcome to RoRat Beta!</h1>
+        <h2>Select a user from the left to get started, or connect a user by executing the script.</h2>
+    </div>
+    <div id="userWindow" style="display: none;"> <!-- hidden by default -->
+        <div class="userWindowHeader">
+            <image class="userImageBig"></image> <!-- replace src and all that with js... -->
+            <h1 class="userNameBig"></h1>
+            <br>
+            <h2 class="userStatusBig"></h2>
+        </div>
+        <br>
+        <div id="userWindowBody">
+            <h2>Quick Actions</h2>
+                <button onclick="quickScript('kill')" class="luaButtons">Kill Player</button>
+                <button onclick="quickScript('infyield')" class="luaButtons">Infinite Yield</button>
+                <button onclick="quickScript('crash')" class="luaButtons">Crash</button>
+            <br>
+            <h2>Lua Executor</h2>
+            <div id="luaEditor" style="height: 300px; width: 750px; box-sizing: border-box;">-- made by mmccall0813</div> 
+            <script>
+                window.editor = ace.edit("luaEditor");
+                editor.setTheme("ace/theme/tomorrow_night");
+                editor.session.setMode("ace/mode/lua");
+                editor.setShowPrintMargin(false);
+                editor.setOption("enableLiveAutocompletion", true);
+                editor.setOption("cursorStyle", "smooth");
+                document.getElementById('luaEditor').style.fontSize='13px';
+            </script>
+            <br>
+            <button class="luaButtons" onclick="execute(window.editor)">Execute</button>
+            <button class="luaButtons" onclick="clearAce()">Clear</button>
+            <input type="file" class="hidden" id="fileInput">
+            <button class="luaButtons" onclick="document.getElementById('fileInput').click()">Load File</button>
+            <script>
+                document.getElementById('fileInput').addEventListener('change', function(e) {
+                    var file = e.target.files[0];
+                    var reader = new FileReader();
+                    reader.onload = function(e) {
+                        editor.setValue(e.target.result);
+                    };
+                    reader.readAsText(file);
+                });
+            </script>
+        </div>
+</html>

@@ -1,0 +1,152 @@
+body {
+    background-color: #292f38;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    /* dark theme */
+}
+
+#users {
+    display: block;
+    left: 0;
+    top: 0;
+    width: 250px; /* width of the sidebar */
+    height: 100%; /* height of the sidebar */
+    background-color: #373f4a; /* sidebar background color */
+    overflow-y: auto; /* scrollbar */
+    overflow-x: hidden; /* no horizontal scrollbar */
+    position: fixed; /* fixed position */
+    z-index: 1; /* always on top */
+    padding-right: 30px;
+    border-right-color: #6d7888;
+    border-right-style: solid;
+    border-right-width: 2px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#refreshUsers {
+    display: block; /* fixed position */
+    left: 0;
+    top: 0;
+    width: 250px; /* width of the sidebar */
+    height: 40px; /* height button */
+    background-color: #1a1b1c; /* sidebar background color */
+    border: none;
+    border-bottom: #6d7888;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    margin: none;
+    padding: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #fff;
+}
+
+.user {
+    display: block;
+    left: 0;
+    top: 0;
+    width: 250px; /* width of the sidebar */
+    height: 80px;
+    background-color: #101214; /* sidebar background color */
+    border: none;
+    border-bottom: #6d7888;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    margin: none;
+    padding: 10px;
+    padding-bottom: 0%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #fff;
+}
+
+.userImage {
+    float: left;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.userImageBig {
+    float: left;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background-color: #1a1b1c;
+}
+
+.userName {
+    display: table-cell;
+    padding-left: 10px;
+    line-height: 5px;
+}
+
+.userNameBig {
+    display: table-cell;
+    padding-left: 25px;
+    padding-top: 50px;
+    font-size: 48px;
+}
+
+.userStatusBig {
+    display: table-cell;
+    color:aquamarine;
+    padding-left: 25px;
+    padding-top: 25px;
+    font-size: 24px;
+}
+
+#contentWindow {
+    margin-left: 250px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+}
+
+#userWindow {
+    margin-left: 250px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+}
+
+#welcomeWindow {
+    margin-left: 250px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+}
+
+.userWindowHeader {
+    line-height: 10px;
+}
+
+#userWindowBody {
+    padding-top: 130px;
+}
+
+#luaEditor {
+    padding-top: 10px;
+}
+
+.luaButtons {
+    width: 110px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 10pt;
+    background-color: #1a1b1c;
+    border: 1px solid #6d7888;
+    color:#fff;
+    padding: 10px 10px 10px 10px; 
+}
+
+.luaButtons:hover {
+    background-color: #373f4a;
+    border: 2px solid #6d7888;
+}
+
+.gameName {
+    display: table-cell;
+    font-size: 12px;
+    color: aquamarine;
+    line-height: normal;
+}
+
+.hidden {
+    display: none;
+}
