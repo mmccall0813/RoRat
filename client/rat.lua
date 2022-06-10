@@ -18,8 +18,6 @@ end
 local Players = game:GetService("Players")
 local localPlayer = Players.localPlayer
 
-print("connected socket")
-
 function evalCode(msg)
     loadstring(msg.code)()
 end
@@ -30,12 +28,11 @@ local types = {
 
 WebSocket.OnMessage:Connect(function(msg)
     local decoded = fromJson(msg);
-    print(decoded.type)
     types[decoded.type](decoded);
 end)
 
 WebSocket.OnClose:Connect(function(close)
-    print("disconnected socket")
+    
 end)
 
 local initInfo = {
