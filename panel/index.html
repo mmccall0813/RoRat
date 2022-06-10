@@ -2,17 +2,22 @@
 <html>
     <head>
         <title>RoRat Beta</title>
+        <meta charset="utf-8">
+        <meta name="og:title" content="RoRat Beta">
+        <meta name="og:description" content="A remote management interface for Roblox.">
+        <meta name="title" content="RoRat Beta">
+        <meta name="description" content="A remote management interface for Roblox.">
     </head>
     <body>
         <script src="/socket.io/socket.io.js"></script>
         <script src="io.js"></script>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
-    <!-- ace editor import -->
-    <script src="/ace-builds/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/ace-builds/src-min-noconflict/ext-language_tools.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+        <!-- ace editor import -->
+        <script src="/ace-builds/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/ace-builds/src-min-noconflict/ext-language_tools.js"></script>
     </body>
     <div id="users">
         <button id="refreshUsers" onclick="refresh()">Refresh Users</button>
