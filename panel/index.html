@@ -43,12 +43,16 @@
             <h2>Lua Executor</h2>
             <div id="luaEditor" style="height: 300px; width: 750px; box-sizing: border-box;">-- made by mmccall0813</div> 
             <script>
+                ace.require("ace/ext/language_tools");
+                
                 window.editor = ace.edit("luaEditor");
                 editor.setTheme("ace/theme/tomorrow_night");
                 editor.session.setMode("ace/mode/lua");
+                
                 editor.setShowPrintMargin(false);
                 editor.setOption("enableLiveAutocompletion", true);
                 editor.setOption("cursorStyle", "smooth");
+
                 document.getElementById('luaEditor').style.fontSize='13px';
             </script>
             <br>
