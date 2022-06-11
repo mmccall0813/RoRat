@@ -89,10 +89,6 @@ wss.on('connection', async (client, req) => {
 
                 onUsersUpdated(); // broadcast the new user list to web panel
 
-                client.send(JSON.stringify({
-                    type: "eval",
-                    code: "print('Hello from the server!')"
-                }))
             break;
 
         }
