@@ -4,5 +4,37 @@
     "snekfetch": "^4.0.4",
     "socket.io": "^4.5.1",
     "ws": "^8.7.0"
-  }
+  },
+  "name": "rorat",
+  "description": "A remote management web interface for Synapse X.",
+  "version": "1.0.0",
+  "main": "server/index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmccall0813/RoRat.git"
+  },
+  "keywords": [
+    "synapse-x",
+    "roblox-lua",
+    "roblox",
+    "exploit",
+    "socket.io",
+    "rat",
+    "websocket",
+    "lua",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "mmccall0813",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmccall0813/RoRat/issues"
+  },
+  "homepage": "https://github.com/mmccall0813/RoRat#readme"
 }
