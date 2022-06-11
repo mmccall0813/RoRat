@@ -30,7 +30,7 @@ install dependencies and run server
 
 ```
 npm i
-node index.js
+npm run start
 ```
 
 then open roblox and run the script in the client folder
