@@ -26,8 +26,6 @@ io.on('connection', (socket) => {
     socket.emit('usersUpdated', JSON.stringify(clientInfo)); // Send the list of users to the client
     socket.on("execute", (data) => {
         data = JSON.parse(data);
-        console.log("execute");
-        console.log(data);
         var client = clientInfo.find(x => x.userId == data.userId);   
         if(client != null){
             var socket = clients.find(x => x.userId == data.userId);
