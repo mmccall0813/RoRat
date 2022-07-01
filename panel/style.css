@@ -5,6 +5,14 @@ body {
     /* dark theme */
 }
 
+a:visited {
+    color:rgb(76, 157, 192)
+}
+
+a {
+    color:rgb(76, 157, 192)
+}
+
 #users {
     display: block;
     left: 0;
