@@ -58,13 +58,13 @@ function onUsersUpdated() {
 wss.on('connection', async (client, req) => {
     client.id = Math.floor(Math.random() * 1000000); // Assign a random ID to the client
 
-    var initalized = false;
+    var initialized = false;
     client.on("message", async (data) => {
         let json = JSON.parse(data.toString()); // Parse the data as JSON
         console.log("Received message from client: " + JSON.stringify(json, null, 2));
         switch(json.type) {
             case "init":
-                initalized = true;
+                initialized = true;
 
                 // Get profile url
                 let apiUrl = `https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=${json.userID}&size=150x150&format=png`;
@@ -106,7 +106,7 @@ wss.on('connection', async (client, req) => {
 
     await sleep(10000);
 
-    if (!initalized) {
+    if (!initialized) {
         client.close(1000, "Did not send initialization message");
         // websocket client did not send initialization message
     }
