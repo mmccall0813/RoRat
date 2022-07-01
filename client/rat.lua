@@ -1,9 +1,13 @@
--- Synapse X is current the only supported exploit so far.
--- If other exploits have websocket support, I will try to add it.
+local ws;
+
+if not syn.websocket.connect then ws = function(a)
+		return WebSocket.connect(a)
+end else ws = syn.websocket.connect end
+
 
 local instanceIP = "127.0.0.1" -- change this to your server ip
 local instancePort = "3001" -- change this to your server port
-local WebSocket = syn.websocket.connect("ws://" .. instanceIP .. ":" .. instancePort .. "/")
+local websocket = ws("ws://" .. instanceIP .. ":" .. instancePort .. "/")
 local HttpService = game:GetService("HttpService");
 
 function toJson(input)
@@ -26,12 +30,12 @@ local types = {
     eval = evalCode
 }
 
-WebSocket.OnMessage:Connect(function(msg)
+websocket.OnMessage:Connect(function(msg)
     local decoded = fromJson(msg);
     types[decoded.type](decoded);
 end)
 
-WebSocket.OnClose:Connect(function(close)
+websocket.OnClose:Connect(function(close)
     
 end)
 
@@ -44,4 +48,4 @@ local initInfo = {
     gameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 }
 
-WebSocket:Send(toJson(initInfo))
+websocket:Send(toJson(initInfo))
