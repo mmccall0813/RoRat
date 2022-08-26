@@ -32,11 +32,28 @@ a {
     padding: 0px;
 }
 
+#githubButton {
+    display: inline;
+    position:absolute;
+    background-color: #1a1b1c;
+    right:0;
+    top: 0;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-bottom: #6d7888;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-left: #6d7888;
+    border-left-style:solid;
+    border-left-width: 2px;
+}
+
 #refreshUsers {
     display: block; /* fixed position */
-    left: 0;
+    left: 40;
     top: 0;
-    width: 250px; /* width of the sidebar */
+    width: 218px; /* width of the sidebar */
     height: 40px; /* height button */
     background-color: #1a1b1c; /* sidebar background color */
     border: none;
