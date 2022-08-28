@@ -1,6 +1,6 @@
 # RoRat
 
-A remote management web interface for Roblox. Requires a LUA executor (exploit) such as [Synapse X](https://x.synapse.to/), [ScriptWare](https://script-ware.com), or [KRNL](https://krnl.vip/)
+A remote management web interface for Roblox. Requires a LUA executor (exploit) such as [Synapse X](https://x.synapse.to/), [ScriptWare](https://script-ware.com), or [KRNL](https://krnl.place/)
 
 ## Why?
 
