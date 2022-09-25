@@ -57,11 +57,10 @@ class User {
 }
 
 function refresh(){
-    console.log("sex (real)");
+    
 }
 
 function showUser(user){
-    // todo
     console.log("show user " + user.userId)
 
     document.querySelector("#welcomeWindow").style.display = "none";
